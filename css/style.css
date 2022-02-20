@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Cabin&display=swap");
+
+:root {
+  --primary: #333333;
+  --white: #fff;
+  --lightGray: #f2f2f2;
+  --fontFamily: "Cabin", sans-serif;
+  --fontLogo: "Architects Daughter", cursive;
+  --fontSize: 16px;
+  --transition: 0.3s ease;
+  --padding: 50px 0;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fontFamily);
+  font-size: var(--fontSize);
+  color: var(--primary);
+  background: var(white);
+  line-height: 1.7;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+/*header*/
+
+header {
+  background-image: url(/img/frederik-lipfert-exv1JefGzTU-unsplash.jpg);
+  height: 90vh;
+  background-position: center;
+  background-size: cover;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+nav ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  margin: 12px;
+  color: black;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+nav ul li a:hover {
+  color: #f79d0d;
+  transition: var(--transition);
+}
+
+.active {
+  color: #f79d0d;
+}
+
+.active:hover {
+  color: #f79d0d;
+  cursor: pointer;
+}
+
+.logo {
+  color: #f79d0d;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 3.5rem;
+  font-family: var(--fontLogo);
+  text-shadow: 0 0 35px var(--white);
+}
+
+/*projects*/
+
+#projects {
+  padding: var(--padding);
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+#projects p {
+  margin-bottom: 35px;
+}
+
+#projects .row:nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#projects .col {
+  flex: 0 0 31%;
+  border: 1px solid black;
+  padding: 15px;
+  background: var(--lightGray);
+}
+
+#projects span {
+  font-family: var(--fontLogo);
+  font-weight: bold;
+}
+
+#projects a {
+  text-decoration: none;
+  color: var(--primary);
+}
+
+#projects a:hover {
+  color: #f79d0d;
+}
+
+.col h3 {
+  margin: 20px;
+}
+
+/*
+about
+*/
+#about img {
+  width: 100%;
+}
+
+#about {
+  display: flex;
+  padding: var(--padding);
+  flex-wrap: wrap;
+}
+
+#about .col:first-child {
+  flex: 2;
+}
+
+#about .col:last-child {
+  flex: 1;
+  padding: 0 20px;
+}
+
+#about .col:last-child h2 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+#about .col:last-child p {
+  text-align: center;
+}
+
+/*contact*/
+
+#contact {
+  padding: var(--padding);
+  text-align: center;
+}
+
+.adress {
+  border: 1px solid black;
+  padding: 15px;
+  background: var(--lightGray);
+}
+
+.adress a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: var(--fontLogo);
+  color: #f79d0d;
+  font-size: 1.5rem;
+}
+
+.adress a + p {
+  font-size: 1.3rem;
+}
+
+.adress i {
+  font-size: 2rem;
+  letter-spacing: 5px;
+  margin: 0 10px;
+}
+
+/*footer*/
+footer {
+  padding: var(--padding);
+}
+
+footer p {
+  text-align: center;
+}
+
+/*responsive*/
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .logo {
+    font-size: 2.1rem;
+  }
+
+  #projects .col {
+    flex: 0 0 100%;
+    margin: 10px;
+  }
+
+  #about .col:first-child {
+    flex: 0 0 100%;
+  }
+
+  #about .col:last-child {
+    flex: 0 0 100%;
+    padding: 0 20px;
+  }
+}
